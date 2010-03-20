@@ -1,0 +1,60 @@
+/*
+Theme Name: Seattle Mennonite
+Theme URI: http://seattlemennonite.org
+Description: Theme for Seattle Mennonite Church.
+Version: 1.0
+Author: Matt Yoder
+Author URI: http://mattyoder.com
+Tags: Seattle Mennonite, church, hands, earth tones
+*/
+
+@import "css/reset.css";
+@import "css/typography.css";
+@import "css/layout.css";
+
+/* Layout styles */
+body {
+    background: #615b53 none scroll no-repeat top center;
+}
+
+#container {
+    background: #f8f8f8 url(images/background-body.jpg) scroll repeat-y top center;
+    margin: 0 auto;
+    width: 800px;
+}
+
+#header {
+    background: #423a32 url(images/header-welcome.jpg) scroll no-repeat top center;
+    height: 330px;
+}
+
+#body {
+    background: transparent url(images/background-top.jpg) scroll no-repeat top center;
+    padding: 20px 40px 0;
+}
+
+#content {
+    float: left;
+    width: 500px;
+}
+
+#sidebar {
+    float: right;
+    width: 200px;
+}
+
+/* Common styles */
+.clear {
+    clear: both;
+}
+
+/* Header styles */
+h1 a {
+    display: block;
+    height: 90px;
+    left: 40px;
+    position: relative;
+    text-indent: -1000em;
+    top: 15px;
+    width: 220px;
+}
