@@ -6,7 +6,9 @@
 
 get_header(); ?>
 
-	<?php if (have_posts()) : ?>
+<div id="content">
+
+<?php if (have_posts()) : ?>
 
 		<h2>Search Results</h2>
 
@@ -28,10 +30,11 @@ get_header(); ?>
 		
 	<?php else : ?>
 
-		<h2>No posts found. Try a different search?</h2>
-		<?php get_search_form(); ?>
+		<h2>Nothing found. Try a different search?</h2>
 
 	<?php endif; ?>
+
+</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

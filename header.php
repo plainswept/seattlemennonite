@@ -26,5 +26,10 @@
 	            <?php bloginfo('name'); ?>
 	        </a>
 	    </h1>
+	    <p class="section-title">Welcome</p>
+	    <div id="header-content">
+	        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : ?>
+    		<?php endif; ?>
+	    </div>
 	</div>
 	<div id="body">

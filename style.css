@@ -14,7 +14,9 @@ Tags: Seattle Mennonite, church, hands, earth tones
 
 /* Layout styles */
 body {
-    background: #615b53 none scroll no-repeat top center;
+    background: #706258 url(images/background-red.jpg) scroll repeat-x top center;
+    color: #353535;
+    font-family: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
 }
 
 #container {
@@ -26,6 +28,7 @@ body {
 #header {
     background: #423a32 url(images/header-welcome.jpg) scroll no-repeat top center;
     height: 330px;
+    position: relative;
 }
 
 #body {
@@ -39,13 +42,38 @@ body {
 }
 
 #sidebar {
+    border-left: 5px solid #a5a09c;
     float: right;
-    width: 200px;
+    padding-left: 20px;
+    width: 175px;
 }
 
 /* Common styles */
 .clear {
     clear: both;
+}
+
+a {
+    color: #5e3a28;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin-bottom: 0.2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, Times, serif;
+    font-style: italic;
+    font-weight: normal;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    text-decoration: none;
+}
+
+h2 a:hover {
+    border-bottom: 3px solid #d9d1cb;
 }
 
 /* Header styles */
@@ -57,4 +85,104 @@ h1 a {
     text-indent: -1000em;
     top: 15px;
     width: 220px;
+}
+
+.section-title {
+    color: white;
+    float: right;
+    font-size: 8em;
+    font-weight: normal;
+    font-family: Optima, Corbel,'Lucida Grande','Lucida Sans Unicode','Lucida Sans','DejaVu Sans','Bitstream Vera Sans','Liberation Sans',Verdana,'Verdana Ref',sans-serif;
+    font-style: italic;
+    letter-spacing: -0.02em;
+    line-height: 0.9em;
+    margin: 80px 40px 0 0;
+    text-shadow: 2px 2px 20px #403932;
+    text-transform: lowercase;
+}
+
+.section-title:hover {
+    border-bottom: 8px dotted #cbc7c4;
+}
+
+#header-content {
+    color: #c4c4c0;
+    font-size: 0.9em;
+    padding: 10px 40px 0 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+    width: 500px;
+}
+
+#header-content #text-4 {
+    margin-top: 1em;
+}
+
+#header-content h2 {
+    display: none;
+}
+
+/* Sidebar styles */
+#sidebar h2, #sidebar h3, #sidebar h4, #sidebar h5, #sidebar h6 {
+    text-transform: lowercase;
+}
+
+#sidebar label {
+    font-family: Georgia, Times, serif;
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+#searchform label {
+    display: none;
+}
+
+#searchform #s {
+    border: 1px solid #d1ccc7;
+    font-size: 1.05em;
+    padding: 2px;
+    width: 140px;
+}
+
+#searchform #searchsubmit {
+    background: transparent url(images/search.png) scroll no-repeat left top;
+    border-style: none;
+    float: right;
+    height: 20px;
+    margin: 5px 0 0 9px;
+    padding: 0;
+    text-indent: -1000em;
+    width: 20px;
+}
+
+.widget_pages {
+    padding: 10px 0 10px 5px;
+}
+
+.widget_pages li {
+    padding: 5px 0;
+    text-align: right;
+}
+
+.widget_pages li a {
+    font-family: Georgia, Times, serif;
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.widget_pages li a:hover {
+    border-bottom: 2px solid #d9d1cb;
+}
+
+.widget_pages .widget-title {
+    display: none;
+}
+
+/* Footer styles */
+#footer {
+    padding: 20px 40px;
 }
