@@ -24,18 +24,24 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
-add_filter('body_class','seattlemennonite_body_classes');
-function seattlemennonite_body_classes($classes, $class) {
+function seattlemennonite_section() {
     global $wp_query;
     if ( is_page() ) {
         if ( $wp_query->post->post_parent ) {
-			$classes[] = 'section-' . get_page( $wp_query->post->post_parent )->post_name;
+			return get_page( $wp_query->post->post_parent );
 		} else {
-		    $classes[] = 'section-' . $wp_query->post->post_name;
+		    return $wp_query->post;
 		}
+    }
+}
+
+add_filter('body_class','seattlemennonite_body_classes');
+function seattlemennonite_body_classes($classes, $class) {
+    $section = seattlemennonite_section();
+    if ( $section ) {
+        $classes[] = 'section-' . $section->post_name;
     }
 	return $classes;
 }
-
 
 ?>

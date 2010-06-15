@@ -26,9 +26,17 @@
 	            <?php bloginfo('name'); ?>
 	        </a>
 	    </h1>
+	    
 	    <p class="section-title">
-	        <a href="welcome">Welcome</a>
+	        <?php $section = seattlemennonite_section(); if ($section): ?>
+	            <?php if ($section->post_name == 'about'): ?>
+	                <a href="<?php print get_permalink($section->ID); ?>">About</a>
+	            <?php endif; ?>
+	        <?php else: ?>
+	            <a href="<?php echo get_option('home'); ?>/">Welcome</a>
+	        <?php endif; ?>
 	    </p>
+	    
 	    <div id="header-content">
 	        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : ?>
     		<?php endif; ?>
