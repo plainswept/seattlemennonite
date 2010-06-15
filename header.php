@@ -27,12 +27,22 @@
 	        </a>
 	    </h1>
 	    
+	    <?php 
+	        $section = seattlemennonite_section();
+	        $section_slug = $section ? $section->post_name : 'home'; 
+	    ?>
 	    <p class="section-title">
-	        <?php $section = seattlemennonite_section(); if ($section): ?>
-	            <?php if ($section->post_name == 'about'): ?>
-	                <a href="<?php print get_permalink($section->ID); ?>">About</a>
-	            <?php endif; ?>
-	        <?php else: ?>
+	        <?php if ($section_slug == 'about'): ?>
+	            <a href="<?php print get_permalink($section->ID); ?>">About</a>
+	        <?php elseif ($section_slug == 'current-events'): ?>
+	            <a href="<?php print get_permalink($section->ID); ?>">Events</a>
+	        <?php elseif ($section_slug == 'leadership'): ?>
+	            <a href="<?php print get_permalink($section->ID); ?>">Leadership</a>
+	        <?php elseif ($section_slug == 'ministries'): ?>
+	            <a href="<?php print get_permalink($section->ID); ?>">Ministries</a>
+	        <?php elseif ($section_slug == 'worship'): ?>
+	            <a href="<?php print get_permalink($section->ID); ?>">Worship</a>
+            <?php else: ?>
 	            <a href="<?php echo get_option('home'); ?>/">Welcome</a>
 	        <?php endif; ?>
 	    </p>
