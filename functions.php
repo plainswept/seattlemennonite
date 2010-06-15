@@ -23,4 +23,19 @@ if ( function_exists('register_sidebar') ) {
 		'after_title' => '</h2>',
 	));
 }
+
+add_filter('body_class','seattlemennonite_body_classes');
+function seattlemennonite_body_classes($classes, $class) {
+    global $wp_query;
+    if ( is_page() ) {
+        if ( $wp_query->post->post_parent ) {
+			$classes[] = 'section-' . get_page( $wp_query->post->post_parent )->post_name;
+		} else {
+		    $classes[] = 'section-' . $wp_query->post->post_name;
+		}
+    }
+	return $classes;
+}
+
+
 ?>
