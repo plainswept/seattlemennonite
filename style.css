@@ -87,7 +87,7 @@ h1 a {
     width: 220px;
 }
 
-.section-title {
+.section-title a {
     color: white;
     float: right;
     font-size: 8em;
@@ -97,11 +97,12 @@ h1 a {
     letter-spacing: -0.02em;
     line-height: 0.9em;
     margin: 80px 40px 0 0;
+    text-decoration: none;
     text-shadow: 2px 2px 20px #403932;
     text-transform: lowercase;
 }
 
-.section-title:hover {
+.section-title a:hover {
     border-bottom: 8px dotted #cbc7c4;
 }
 
@@ -184,8 +185,12 @@ h1 a {
     display: none;
 }
 
-.page_item li a {
-    font-size: 75%;
+.widget_pages li li {
+    padding: 2px 0;
+}
+
+.widget_pages li li a {
+    font-size: 0.9em;
 }
 
 /* Footer styles */
