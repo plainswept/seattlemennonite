@@ -36,7 +36,7 @@ function seattlemennonite_section() {
 }
 
 add_filter('body_class','seattlemennonite_body_classes');
-function seattlemennonite_body_classes($classes, $class) {
+function seattlemennonite_body_classes($classes) {
     $section = seattlemennonite_section();
     if ( $section ) {
         $classes[] = 'section-' . $section->post_name;
