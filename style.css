@@ -157,6 +157,8 @@ h1 a {
     width: 20px;
 }
 
+/* Pages nav styles */
+
 .widget_pages {
     padding: 10px 0 10px 5px;
 }
@@ -182,7 +184,13 @@ h1 a {
     display: none;
 }
 
+.page_item li a {
+    font-size: 75%;
+}
+
 /* Footer styles */
 #footer {
+    font-size: 75%;
     padding: 20px 40px;
+    text-align: center;
 }
