@@ -42,6 +42,8 @@
 	            <a href="<?php print get_permalink($section->ID); ?>">Ministries</a>
 	        <?php elseif ($section_slug == 'worship'): ?>
 	            <a href="<?php print get_permalink($section->ID); ?>">Worship</a>
+	        <?php elseif ($section_slug == 'photos'): ?>
+	            <a href="<?php print get_permalink($section->ID); ?>">Photos</a>
             <?php else: ?>
 	            <a href="<?php echo get_option('home'); ?>/">Welcome</a>
 	        <?php endif; ?>
