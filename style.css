@@ -25,12 +25,6 @@ body {
     width: 800px;
 }
 
-#header {
-    background: #423a32 url(images/header-welcome.jpg) scroll no-repeat top center;
-    height: 330px;
-    position: relative;
-}
-
 #body {
     background: transparent url(images/background-top.jpg) scroll no-repeat top center;
     padding: 20px 40px 0;
@@ -77,6 +71,40 @@ h2 a:hover {
 }
 
 /* Header styles */
+#header {
+    background: #423a32 url(images/header-general.jpg) scroll no-repeat top center;
+    height: 250px;
+    position: relative;
+}
+
+.home #header {
+    background: #423a32 url(images/header-welcome.jpg) scroll no-repeat top center;
+    height: 330px;
+    
+}
+
+.section-about #header {
+    background-image: url(images/header-about.jpg);
+}
+
+.section-current-events #header {
+    background-image: url(images/header-events.jpg);
+}
+
+.section-leadership #header {
+    background-image: url(images/header-leadership.jpg);
+}
+
+.section-ministries #header {
+    background-image: url(images/header-ministries.jpg);
+}
+
+.section-worship #header {
+    background-image: url(images/header-worship.jpg);
+}
+
+
+
 h1 a {
     display: block;
     height: 90px;
@@ -90,16 +118,21 @@ h1 a {
 .section-title a {
     color: white;
     float: right;
-    font-size: 8em;
+    font-size: 6em;
     font-weight: normal;
     font-family: Optima, Corbel,'Lucida Grande','Lucida Sans Unicode','Lucida Sans','DejaVu Sans','Bitstream Vera Sans','Liberation Sans',Verdana,'Verdana Ref',sans-serif;
     font-style: italic;
     letter-spacing: -0.02em;
     line-height: 0.9em;
-    margin: 80px 40px 0 0;
+    margin: 40px 40px 0 0;
     text-decoration: none;
     text-shadow: 2px 2px 20px #403932;
     text-transform: lowercase;
+}
+
+.home .section-title a {
+    font-size: 8em;
+    margin: 80px 40px 0 0;
 }
 
 .section-title a:hover {
@@ -107,7 +140,7 @@ h1 a {
 }
 
 #header-content {
-    color: #c4c4c0;
+    color: #EEEEEE;
     font-size: 0.9em;
     padding: 10px 40px 0 0;
     position: absolute;
