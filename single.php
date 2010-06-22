@@ -19,7 +19,9 @@ get_header();
 			<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 			<p class="post-postedin">
 			    <?php the_tags('Tags: ', ', ', '<br />'); ?>
-			    Posted in <?php the_category(', ') ?>
+			    <?php if ( ! in_category('Uncategorized') ) : ?>
+			        Posted in <?php the_category(', ') ?>
+			    <?php endif; ?>
 			    <?php edit_post_link('Edit', ' | ', ''); ?> 
 			</p>
 
