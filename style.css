@@ -264,7 +264,8 @@ h1 a {
 }
 
 .comment-body {
-    margin: 10px 0;
+    font-size: 0.92em;
+    margin: 15px 0;
 }
 
 .comment-author {
@@ -301,14 +302,24 @@ h1 a {
 #respond form #url,
 #respond form textarea {
     border: 1px solid #D1CCC7;
-    font-size: 0.9em;
+    font-size: 0.8em;
     padding: 4px;
+}
+
+#respond form #author,
+#respond form #email,
+#respond form #url {
+    width: 230px;
+}
+
+#respond form #author {
+    font-weight: bold;
 }
 
 #respond form textarea {
     width: 490px;
     font-family: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
-    font-size: 1.05em;
+    font-size: 0.92em;
 }
 
 #respond label {
