@@ -29,25 +29,14 @@
 	    
 	    <?php 
 	        $section = seattlemennonite_section();
-	        $section_slug = $section ? $section->post_name : 'home'; 
 	    ?>
-	    <p class="section-title">
-	        <?php if ($section_slug == 'about'): ?>
-	            <a href="<?php print get_permalink($section->ID); ?>">About</a>
-	        <?php elseif ($section_slug == 'current-events'): ?>
-	            <a href="<?php print get_permalink($section->ID); ?>">Events</a>
-	        <?php elseif ($section_slug == 'leadership'): ?>
-	            <a href="<?php print get_permalink($section->ID); ?>">Leadership</a>
-	        <?php elseif ($section_slug == 'ministries'): ?>
-	            <a href="<?php print get_permalink($section->ID); ?>">Ministries</a>
-	        <?php elseif ($section_slug == 'worship'): ?>
-	            <a href="<?php print get_permalink($section->ID); ?>">Worship</a>
-	        <?php elseif ($section_slug == 'photos'): ?>
-	            <a href="<?php print get_permalink($section->ID); ?>">Photos</a>
+        <p class="section-title">
+            <?php if ($section): ?>
+                <a href="<?php print $section['url']; ?>"><?php print $section['title']; ?></a>
             <?php else: ?>
-	            <a href="<?php echo get_option('home'); ?>/">Welcome</a>
-	        <?php endif; ?>
-	    </p>
+                <a href="<?php echo get_option('home'); ?>/">Welcome</a>
+            <?php endif; ?>
+        </p>
 	    
 	    <div id="header-content">
 	        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : ?>

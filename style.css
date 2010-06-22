@@ -103,7 +103,9 @@ h2 a:hover {
     background-image: url(images/header-worship.jpg);
 }
 
-
+.section-photos #header {
+    background-image: url(images/header-photos.jpg);
+}
 
 h1 a {
     display: block;
@@ -193,16 +195,16 @@ h1 a {
 
 /* Pages nav styles */
 
-.widget_pages {
+#sidebar .menu {
     padding: 10px 0 10px 5px;
 }
 
-.widget_pages li {
+#sidebar .menu li {
     padding: 5px 0;
     text-align: right;
 }
 
-.widget_pages li a {
+#sidebar .menu li a {
     font-family: Georgia, Times, serif;
     font-size: 1.3em;
     font-style: italic;
@@ -210,19 +212,19 @@ h1 a {
     text-decoration: none;
 }
 
-.widget_pages li a:hover {
+#sidebar .menu li a:hover {
     border-bottom: 2px solid #d9d1cb;
 }
 
-.widget_pages .widget-title {
+#sidebar .menu .widget-title {
     display: none;
 }
 
-.widget_pages li li {
+#sidebar .menu li li {
     padding: 2px 0;
 }
 
-.widget_pages li li a {
+#sidebar .menu li li a {
     font-size: 0.9em;
 }
 
