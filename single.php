@@ -11,14 +11,17 @@ get_header();
 
 		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<h2><?php the_title(); ?></h2>
-			<p>by <?php the_author(); ?></p>
-			<p>Posted <?php the_time('F jS, Y') ?></p>
-			<?php the_category(', ') ?>
-			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
+			<p class="post-byline">
+			    <?php the_time('F jS, Y') ?>
+			    &mdash; <?php the_author() ?>
+			</p>
+			<?php the_content(); ?>
 			<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-			<?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
-
-			<?php edit_post_link('Edit this entry','','.'); ?>
+			<p class="post-postedin">
+			    <?php the_tags('Tags: ', ', ', '<br />'); ?>
+			    Posted in <?php the_category(', ') ?>
+			    <?php edit_post_link('Edit', ' | ', ''); ?> 
+			</p>
 
 		</div>
 

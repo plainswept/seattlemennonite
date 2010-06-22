@@ -20,13 +20,21 @@
 <?php if ( have_comments() ) : ?>
 	<h3 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
-	<?php previous_comments_link() ?> | <?php next_comments_link() ?>
+    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+		<div class="comment-nav">
+			<?php previous_comments_link() ?> | <?php next_comments_link() ?>
+		</div>
+    <?php endif; ?>
 
 	<ol class="commentlist">
 	<?php wp_list_comments(); ?>
 	</ol>
 
-	<?php previous_comments_link() ?> | <?php next_comments_link() ?>
+	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+		<div class="comment-nav">
+			<?php previous_comments_link() ?> | <?php next_comments_link() ?>
+		</div>
+    <?php endif; ?>
 
 <?php else : // this is displayed if there are no comments so far ?>
 
@@ -61,14 +69,30 @@
 
 		<?php else : ?>
 
-		<p><input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-		<label for="author"><small>Name <?php if ($req) echo "(required)"; ?></small></label></p>
+		<p>
+		    <input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+            <label for="author">
+                <small>
+                    Name
+                    <?php if ($req): ?><span class="required">(required)</span><?php endif; ?>
+                </small>
+            </label>
+		</p>
 
-		<p><input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-		<label for="email"><small>Mail (will not be published) <?php if ($req) echo "(required)"; ?></small></label></p>
+		<p>
+		    <input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+		    <label for="email">
+		        <small>
+		            Mail
+		            <?php if ($req): ?><span class="required">(required, kept private)</span><?php endif; ?>
+		        </small>
+		    </label>
+		</p>
 
-		<p><input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
-		<label for="url"><small>Website</small></label></p>
+		<p>
+		    <input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
+		    <label for="url"><small>Website</small></label>
+		</p>
 
 		<?php endif; ?>
 

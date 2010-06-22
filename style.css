@@ -228,6 +228,100 @@ h1 a {
     font-size: 0.9em;
 }
 
+/* Content styles */
+#content .post {
+    margin: 0 0 15px 0;
+}
+
+#content img.alignleft {
+    margin: 0 15px 15px 0;
+}
+
+#content img.alignright {
+    margin: 0 0 15px 15px;
+}
+
+#content h2 {
+    margin: 0;
+}
+
+.post-byline,
+.post-postedin {
+    color: #6d6967;
+    font-style: italic;
+    margin: 0 0 10px 0;
+}
+
+.post-postedin {
+    margin: 10px 0;
+}
+
+/* Comment styles */
+
+#comments,
+#respond h3 {
+    font-size: 1.15em;
+}
+
+.comment-body {
+    margin: 10px 0;
+}
+
+.comment-author {
+    font-family: Georgia, Times, serif;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+.comment-author img {
+    margin: 0 3px 0 0;
+}
+
+.comment-meta {
+    margin: 0 0 10px 0;
+}
+
+.comment-meta a {
+    color: #6d6967;
+    font-style: italic;
+    text-decoration: none;
+}
+
+#respond form {
+    margin: 10px 0;
+}
+
+#respond form p,
+#respond #submit {
+    margin: 8px 0;
+}
+
+#respond form #author,
+#respond form #email,
+#respond form #url,
+#respond form textarea {
+    border: 1px solid #D1CCC7;
+    font-size: 0.9em;
+    padding: 4px;
+}
+
+#respond form textarea {
+    width: 490px;
+    font-family: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
+    font-size: 1.05em;
+}
+
+#respond label {
+    color: #6D6967;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0 0 0 5px;
+}
+
+#respond label .required {
+    color: #998078;
+}
+
 /* Footer styles */
 #footer {
     font-size: 75%;
