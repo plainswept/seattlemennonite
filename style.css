@@ -51,11 +51,6 @@ a {
     color: #5e3a28;
 }
 
-h2 {
-    font-size: 1.6em;
-    margin-bottom: 0.2em;
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, Times, serif;
     font-style: italic;
@@ -64,10 +59,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
-}
-
-h2 a:hover {
-    border-bottom: 3px solid #d9d1cb;
 }
 
 /* Header styles */
@@ -245,8 +236,48 @@ h1 a {
     margin: 0 0 15px 15px;
 }
 
+#content h1 {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
 #content h2 {
+    font-size: 1.3em;
+}
+
+#content h3 {
+    font-size: 1.1em;
+}
+
+#content h4 {
+    font-size: 1em;
+}
+
+#content h5 {
+    font-size: 0.9em;
+}
+
+#content h6 {
+    font-size: 0.8em;
+}
+
+#content h1 a:hover,
+#content h2 a:hover,
+#content h3 a:hover,
+#content h4 a:hover,
+#content h5 a:hover,
+#content h6 a:hover {
+    border-bottom: 3px solid #d9d1cb;
+}
+
+#content h2.post-title,
+#content h2.page-title {
+    font-size: 1.6em;
     margin: 0;
+}
+
+#content p {
+    margin: 0.75em 0;
 }
 
 .post-byline,
