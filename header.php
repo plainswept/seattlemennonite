@@ -31,7 +31,7 @@
 	        $section = seattlemennonite_section();
 	    ?>
         <p class="section-title">
-            <?php if ($section): ?>
+            <?php if ($section && strtolower($section['title']) != 'home'): ?>
                 <a href="<?php print $section['url']; ?>"><?php print $section['title']; ?></a>
             <?php else: ?>
                 <a href="<?php echo get_option('home'); ?>/">Welcome</a>
