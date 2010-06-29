@@ -39,8 +39,7 @@
         </p>
 	    
 	    <div id="header-content">
-	        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : ?>
-    		<?php endif; ?>
+	        <?php dynamic_sidebar( 'header' ); ?>
 	    </div>
 	</div>
 	<div id="body">
